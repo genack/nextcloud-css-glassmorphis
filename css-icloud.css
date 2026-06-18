@@ -317,10 +317,28 @@ button.primary,
     background-color: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(5px) !important;
 }
+.files-list__header{
+z-index: 20!important;
+}
+
+#app-content-vue li.activity-entry{
+    background: transparent !important;
+    padding: .5em !important;
+    margin-bottom: .3em !important;
+}
 
 #app-content-vue li{
     border-radius: 12px !important;
-    margin-bottom: .2em;
+    margin-left: .2em;
+}
+
+#app-content-vue ul.scroller__content li{
+    background: transparent !important;
+}
+
+#app-content-vue ul.scroller__content li.wrapper{
+    margin: .25em 0em .25em;
+    padding: .2em;
 }
 
 #app-content-vue div.showdetails li{
@@ -336,6 +354,7 @@ button.primary,
 
 .files-list__row {
     transition: all 0.2s ease-in-out !important;
+    
 }
 
 /* Evitar que las filas tengan fondo sólido al pasar el mouse */
@@ -344,6 +363,21 @@ button.primary,
     transform: translateY(-1px); /* Pequeño levante */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
 
+}
+
+/* modo grid (Cuadrícula activa)*/
+.files-list--grid .files-list__row {
+    margin-top: 0.2em !important;    /* Ajusta el valor en px que necesites */
+    margin-bottom: 0.2em !important; /* "button" (bottom) corregido */
+}
+
+
+
+/* Si quieres modificar un botón específico dentro del tbody en modo Grid */
+.view-grid .files-list__tbody button,
+.view-grid .files-list__tbody .button {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 /* Sidebar de detalles (Ajuste de selector para NC36) */
@@ -772,7 +806,7 @@ select,
 [data-theme-default].panel h2, [data-theme-default].panel h3 {
   color: var(--text-color-main) !important;
 }
-
+[data-theme-default] .header-menu__wrapper,
 [data-theme-light] .header-menu__wrapper {
  background-color:rgba(255, 255, 255, 0.7) !important;
  backdrop-filter: blur(15px) !important;
