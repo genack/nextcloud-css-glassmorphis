@@ -330,8 +330,10 @@ z-index: 20!important;
 #app-content-vue li{
     border-radius: 12px !important;
     margin-left: .2em;
+    margin-bottom: .2em;
 }
 
+#app-content-vue div.task-list li,
 #app-content-vue ul.scroller__content li{
     background: transparent !important;
 }
